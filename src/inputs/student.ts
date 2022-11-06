@@ -1,37 +1,41 @@
 import { Field, InputType } from "type-graphql";
 
 @InputType("Create")
-class NewStudent{
-    @Field()
-    name : string;
+class NewStudent {
+  @Field()
+  name: string;
 
-    @Field()
-    email : string;
+  @Field()
+  email: string;
 
-    @Field()
-    password : string;
+  @Field()
+  password: string;
 }
 
 @InputType("Login")
-class LoginInput{
-    @Field()
-    email : string;
+class LoginInput {
+  @Field()
+  email: string;
 
-    @Field()
-    password : string
-
+  @Field()
+  password: string;
 }
 
 @InputType("Change")
-class Change{
-    @Field({nullable: true})
-    name : string;
+class Change {
+  @Field({ nullable: true })
+  name: string;
 
-    @Field({nullable: true})
-    email : string;
+  @Field({ nullable: true })
+  email: string;
 
-    @Field({nullable: true})
-    password : string;
+  @Field({ nullable: true })
+  password: string;
+}
+@InputType("Delete")
+class Delete {
+  @Field()
+  id: string;
 }
 
-export {NewStudent, LoginInput, Change}
+export { NewStudent, LoginInput, Change, Delete };
